@@ -1,0 +1,309 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Receptor Unificado</title>
+    <style>
+        body, html {
+        margin: 0%;
+        padding: 0%;
+        }
+        #FondoPrepagina {
+            background-image: url('fondo1.png'); /* Ruta de la imagen de fondo */
+            height: 100vh;
+            background-repeat: no-repeat; /* Para que no se repita la imagen */
+            width: 100%;
+            background-size: cover; /* Para cubrir todo el tamaño del contenedor */
+            background-position: center center;
+
+        }
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        
+        #encabezadodiv{
+            display: flex;
+            justify-content: center;
+        }
+
+        #encabezado {
+            font-family: Arial, Helvetica, sans-serif ; /* Tipo de letra (puedes cambiar "Arial" por cualquier otra fuente que desees) */
+            font-size: 40px; /* Tamaño de la fuente */
+            font-weight: bold; /* Peso de la fuente (normal, bold, etc.) */
+            color: #ffffff; /* Color del texto */
+            margin: 0%;
+            line-height: 3;
+            text-align: center;
+            background-color: rgb(41, 169, 224, 0.7);
+            box-shadow: 5px 5px 10px 1px #414040;
+            width: 1920px;
+            margin-top: 3vw;
+            margin-bottom: 3vw;
+        }
+
+
+        #texto_bienvenida{
+            display: flex;
+            flex-direction: column; /* Cambia la dirección del eje principal a vertical */
+            align-items: center; /* Centra los elementos horizontalmente */
+            text-align: center; /* Alinea el texto horizontalmente */
+        }
+
+        #bienvenida{
+            font-family: Arial, Helvetica, sans-serif; /* Tipo de letra (puedes cambiar "Arial" por cualquier otra fuente que desees) */
+            font-size: 40px; /* Tamaño de la fuente */
+            font-weight: bold; /* Peso de la fuente (normal, bold, etc.) */
+            color: #000000; /* Color del texto */
+            /*-webkit-text-stroke: 2px #2d263a;*/
+            margin: 0%;
+            /*display: inline-block;*/
+            line-height: 10vh;
+            text-align: center;
+            height: 25px;
+            text-shadow: 1px 3px 1px #adadad;
+        }
+
+        #centro{
+            font-family: Arial, Helvetica, sans-serif; /* Tipo de letra (puedes cambiar "Arial" por cualquier otra fuente que desees) */
+            font-size: 28px; /* Tamaño de la fuente */
+            font-weight: bold; /* Peso de la fuente (normal, bold, etc.) */
+            color: #000000; /* Color del texto */
+            /*-webkit-text-stroke: 1.7px #2d263a;*/
+            /*display: inline-block;*/
+            line-height: 15vh;
+            text-align: center;
+            height: 25px;
+            text-shadow: 1px 3px 1px #adadad;
+        }
+
+        #botones {
+            padding: 4vw;
+            text-align: center;
+        }
+
+        .boton {
+            text-align: center;
+            background: none #d1d5d6;
+            border: none;
+            font-weight: bold;
+            cursor: pointer;
+            font-size: 20px;
+            padding: 10px;
+            border-radius: 50px;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            white-space: nowrap;
+            box-shadow: 0px 5px 5px 0px #0a0a0a !important; /*#40cbcf*/
+            display: inline-block !important;  
+            width: 280px !important;
+            height: 110px !important;
+            margin: 4vh;
+            color: #2d263a; /* Color del texto */
+        }
+
+        #footer {
+            margin: 0;
+            height: 0vh;
+            display: flex; /* Hace que el cuerpo y el HTML sean contenedores flexibles */
+            justify-content: center; /* Centra horizontalmente el contenido */
+            align-items: center; /* Centra verticalmente el contenido */
+        }
+        #inicioBoton{
+            padding-left: 5vh;
+        }
+
+        .botonInicio{
+            background: none #d1d5d6;
+            border: none;
+            font-weight: bold;
+            font-size: 20px;
+            border-radius: 50px;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            white-space: nowrap;
+            box-shadow: 0px 5px 5px 0px #0a0a0a !important; /*#40cbcf*/
+            display: inline-block !important;  
+            width: 100px !important;
+            height: 50px !important;
+            color: #2d263a; /* Color del texto */
+            text-align: center;
+        }
+
+
+
+
+
+
+        /*CSS para TABLET*/
+        @media only screen and (max-width: 1280px) {
+            body, html {
+            margin: 0;
+            padding: 0;
+            height: 100%;
+        }
+
+        #FondoPrepagina {
+            background-image: url('fondo1.png');
+            background-size:cover;
+            background-repeat: no-repeat;
+            background-blend-mode: soft-light;
+            background-position: center center;
+            height: 100%;
+        }
+
+        #encabezadodiv {
+            display: flex;
+            justify-content: center;
+            padding-top: 5%;
+        }
+
+        #encabezado {
+            font-family: Arial, Helvetica, sans-serif;
+            font-size: 4vw;
+            font-weight: bold;
+            color: #ffffff;
+            margin: 0;
+            line-height: 1.5;
+            text-align: center;
+            background-color: rgba(41, 169, 224, 0.7);
+            box-shadow: 0px 5px 10px 1px #414040;
+            width: 100%;
+            top: 7%;
+        }
+
+        #texto_bienvenida {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+
+        }
+
+        #bienvenida {
+            font-family: Arial, Helvetica, sans-serif;
+            font-size: 4vw;
+            font-weight: bold;
+            color: #000000;
+            margin: 0;
+            line-height: 1.5vh;
+            text-align: center;
+            padding-top: 5vh;
+            padding-bottom: 1vh;
+        }
+
+        #centro {
+            font-family: Arial, Helvetica, sans-serif;
+            font-size: 2.8vw;
+            font-weight: bold;
+            color: #000000;
+            margin: 0;
+            line-height: 5vh;
+            text-align: center;
+            padding-bottom: 5vh;
+        }
+
+        #botones {
+            padding:0%;
+            text-align: center;
+            align-content: space-between;
+        }
+
+        .boton {
+            text-align: center;
+            background: none #d1d5d6;
+            border: none;
+            font-weight: bold;
+            cursor: pointer;
+            font-size: 1.5vw;
+            padding: 3vh;
+            border-radius: 50px;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            white-space: nowrap;
+            box-shadow: 0px 2vw 2vw 0px #0a0a0a !important;
+            display: inline-block !important;
+            max-width: 80vw;
+            max-height: 30vh;
+            margin: 2vh;
+            color: #2d263a;
+        }
+
+        #footer {
+            margin: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 0%;
+            height: 5vw;
+        }
+
+        #footer img {
+            max-width: 100%;
+            height: auto;
+        }
+
+        #pie{
+            padding: 0%;
+        }
+        
+        #inicioBoton{
+            padding-left: 5vw;
+            padding-bottom: 4vh;
+        }
+
+        .botonInicio{
+            background: none #d1d5d6;
+            border: none;
+            font-weight: bold;
+            font-size: 20px;
+            border-radius: 50px;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            white-space: nowrap;
+            box-shadow: 0px 5px 5px 0px #0a0a0a !important; /*#40cbcf*/
+            display: inline-block !important;  
+            width: 100px !important;
+            height: 50px !important;
+            color: #2d263a; /* Color del texto */
+            text-align: center;
+        }
+        }
+    </style>
+</head>
+
+<body>
+    <div id="FondoPrepagina"> 
+            <div id="encabezadodiv"> 
+                <h1 id="encabezado"><span>SERVICIOS UNIFICADO TEST2</span></h1>
+            </div>
+            <div id="texto_bienvenida">
+                <h2 id="bienvenida">Bienvenido/a</h2>
+                <h2 id="centro">¿Por cual servicio quiere ingresar?</h2>
+            </div>                
+            <div id="botones">
+                <button class="boton" onclick="window.location.href='https://hospital2.test.cba.gov.ar/ehCS-ui/~./public/content/patientReceiver.zul?receiverId=ClMed'">Servicio Clinica Medica</button>
+                <button class="boton" onclick="window.location.href='https://hospital2.test.cba.gov.ar/ehCS-ui/~./public/content/patientReceiver.zul?receiverId=Quem'">Servicio Quemados</button>
+                <button class="boton" onclick="window.location.href='https://hospital2.test.cba.gov.ar/ehCS-ui/~./public/content/patientReceiver.zul?receiverId=Card'">Servicio Cardiologia</button>
+                <button class="boton" onclick="window.location.href='https://hospital2.test.cba.gov.ar/ehCS-ui/~./public/content/patientReceiver.zul?receiverId=CiGral'">Servicio Cirugia Gral</button>
+                <button class="boton" onclick="window.location.href='https://hospital2.test.cba.gov.ar/ehCS-ui/~./public/content/patientReceiver.zul?receiverId=Gastro'">Servicio Gastroenterología</button>
+                <button class="boton" onclick="window.location.href='https://hospital2.test.cba.gov.ar/ehCS-ui/~./public/content/patientReceiver.zul?receiverId=SMental'">Servicio Salud Mental</button>
+                <button class="boton" onclick="window.location.href='https://hospital2.test.cba.gov.ar/ehCS-ui/~./public/content/patientReceiver.zul?receiverId=Neuro'">Servicio Neurologia</button>
+                <button class="boton" onclick="window.location.href='https://hospital2.test.cba.gov.ar/ehCS-ui/~./public/content/patientReceiver.zul?receiverId=PruebaGustiReceptor'">Servicio Prueba</button>
+            </div>
+            <div id="inicioBoton">
+                <button class="botonInicio" onclick="window.location.href='prepagina-receptor.html'">Inicio</button>
+            </div>
+            <div id="footer">
+                <h5>
+                    <img src="footer.png">
+                </h5>
+            </div>
+    </div>
+
+
+    
+</body>
+</html>
