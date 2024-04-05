@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Receptor Unificado</title>
+    <style>
+         body, html {
+        margin: 0%;
+        padding: 0%;
+        }
+        #FondoPrepagina {
+            background-image: url('fondo1.png'); /* Ruta de la imagen de fondo */
+            height: 100vh;
+            background-repeat: no-repeat; /* Para que no se repita la imagen */
+            width: 100%;
+            background-size: cover; /* Para cubrir todo el tamaño del contenedor */
+            background-position: center center;
+
+        }
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        
+        #encabezadodiv{
+            display: flex;
+            justify-content: center;
+        }
+
+        #encabezado {
+            font-family: Arial, Helvetica, sans-serif ; /* Tipo de letra (puedes cambiar "Arial" por cualquier otra fuente que desees) */
+            font-size: 40px; /* Tamaño de la fuente */
+            font-weight: bold; /* Peso de la fuente (normal, bold, etc.) */
+            color: #ffffff; /* Color del texto */
+            margin: 0%;
+            line-height: 3;
+            text-align: center;
+            background-color: rgb(41, 169, 224, 0.7);
+            box-shadow: 5px 5px 10px 1px #414040;
+            width: 1920px;
+            margin-top: 3vw;
+            margin-bottom: 3vw;
+        }
+
+
+        #texto_bienvenida{
+            display: flex;
+            flex-direction: column; /* Cambia la dirección del eje principal a vertical */
+            align-items: center; /* Centra los elementos horizontalmente */
+            text-align: center; /* Alinea el texto horizontalmente */
+        }
+
+        #bienvenida{
+            font-family: Arial, Helvetica, sans-serif; /* Tipo de letra (puedes cambiar "Arial" por cualquier otra fuente que desees) */
+            font-size: 40px; /* Tamaño de la fuente */
+            font-weight: bold; /* Peso de la fuente (normal, bold, etc.) */
+            color: #000000; /* Color del texto */
+            /*-webkit-text-stroke: 2px #2d263a;*/
+            margin: 0%;
+            /*display: inline-block;*/
+            line-height: 10vh;
+            text-align: center;
+            height: 25px;
+            text-shadow: 1px 3px 1px #adadad;
+        }
+
+        #centro{
+            font-family: Arial, Helvetica, sans-serif; /* Tipo de letra (puedes cambiar "Arial" por cualquier otra fuente que desees) */
+            font-size: 28px; /* Tamaño de la fuente */
+            font-weight: bold; /* Peso de la fuente (normal, bold, etc.) */
+            color: #000000; /* Color del texto */
+            /*-webkit-text-stroke: 1.7px #2d263a;*/
+            /*display: inline-block;*/
+            line-height: 15vh;
+            text-align: center;
+            height: 25px;
+            text-shadow: 1px 3px 1px #adadad;
+        }
+
+        #botones {
+            padding: 4vw;
+            text-align: center;
+        }
+
+        .boton {
+            text-align: center;
+            background: none #d1d5d6;
+            border: none;
+            font-weight: bold;
+            cursor: pointer;
+            font-size: 20px;
+            padding: 10px;
+            border-radius: 50px;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            white-space: nowrap;
+            box-shadow: 0px 5px 5px 0px #0a0a0a !important; /*#40cbcf*/
+            display: inline-block !important;  
+            width: 280px !important;
+            height: 110px !important;
+            margin: 10vh;
+            margin-bottom: 25vh;
+            color: #2d263a; /* Color del texto */
+        }
+
+        #footer {
+            margin: 0;
+            height: 0vh;
+            display: flex; /* Hace que el cuerpo y el HTML sean contenedores flexibles */
+            justify-content: center; /* Centra horizontalmente el contenido */
+            align-items: center; /* Centra verticalmente el contenido */
+        }
+        
+        
+        
+        
+        
+        
+        
+        
+        /* Tamaño ajustado para TABLET*/
+        @media only screen and (max-width: 1280px) {
+            body, html {
+            margin: 0;
+            padding: 0;
+            height: 100%;
+        }
+    
+        #FondoPrepagina {
+            background-image: url('fondo1.png');
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-blend-mode: soft-light;
+            background-position: center center;
+            background-attachment: fixed;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            height: 100%;
+        }
+    
+        #encabezadodiv {
+            display: flex;
+            justify-content: center;
+            padding-top: 5%;
+        }
+    
+        #encabezado {
+            font-family: Arial, Helvetica, sans-serif;
+            font-size: 3.5vw;
+            font-weight: bold;
+            color: #ffffff;
+            margin: 0;
+            line-height: 1.5;
+            text-align: center;
+            background-color: rgba(41, 169, 224, 0.7);
+            box-shadow: 0px 5px 10px 1px #414040;
+            width: 100%;
+            top: 7%;
+        }
+    
+        #texto_bienvenida {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+        }
+    
+        #bienvenida {
+            font-family: Arial, Helvetica, sans-serif;
+            font-size: 3.5vw;
+            font-weight: bold;
+            color: #000000;
+            margin: 0;
+            line-height: 1.5vw;
+            text-align: center;
+            padding-top: 2vw;
+        }
+    
+        #centro {
+            font-family: Arial, Helvetica, sans-serif;
+            font-size: 2.5vw;
+            font-weight: bold;
+            color: #000000;
+            margin: 0;
+            line-height: 3.5vw;
+            text-align: center;
+        }
+    
+        #botones {
+            padding: 1vw;
+            text-align: center;
+        }
+    
+        .boton {
+            padding: 0%;
+            margin: 7vw;
+            text-align: center;
+            background: none #d1d5d6;
+            border: none;
+            font-weight: bold;
+            cursor: pointer;
+            font-size: 1.7vw;
+            border-radius: 50px;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            white-space: nowrap;
+            box-shadow: 0px 2vw 2vw 0px #0a0a0a !important;
+            display: inline-block !important;
+            width: 300px;
+            height: 100px;
+            color: #2d263a;
+        }
+    
+        #footer {
+            margin: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 0%;
+            height: 6vw;
+        }
+        }
+    </style>
+</head>
+
+<body>
+    <div id="FondoPrepagina"> 
+            <div id="encabezadodiv"> 
+                <h1 id="encabezado"><span>RECEPTOR UNIFICADO TEST2</span></h1>
+            </div>
+            <div id="texto_bienvenida">
+                <h2 id="bienvenida">Bienvenido/a</h2>
+                <h2 id="centro">¿Por que motivo has venido al centro?</h2>
+            </div>                
+            <div id="botones">
+                <button class="boton" onclick="window.location.href='https://hospital2.test.cba.gov.ar/ehCS-ui/~./public/content/patientReceiver.zul?receiverId=PruebaGustiReceptor2'">Sector Urgencias</button>
+                <button class="boton" onclick="window.location.href='Unificador_Servicios.html'">Sector Consulta Externa</button>
+            </div>
+            <div id="footer">
+                <h5>
+                    <img src="footer.png">
+                </h5>
+            </div>
+    </div>
+
+
+
+</body>
+</html>
